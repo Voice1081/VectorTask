@@ -1,3 +1,4 @@
+package vectors;
 
 public class Vector5D extends Vector{
 	public Vector5D(int x1, int x2, int x3, int x4, int x5) {
@@ -18,7 +19,7 @@ public class Vector5D extends Vector{
 	
 	@Override
 	public boolean equals(Object other) {
-		if (!(other instanceof Vector5D))return false;
+		if (!(other instanceof Vector5D)) throw new IllegalArgumentException();
 		return super.equals(other);
 	}
 	

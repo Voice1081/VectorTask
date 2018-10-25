@@ -1,5 +1,6 @@
+package vectors;
 
-public abstract class Vector implements IVector{
+public abstract class Vector{
 
 	private final int dimension;
 	private final int[] coordinates;
@@ -51,8 +52,7 @@ public abstract class Vector implements IVector{
 		return hash;
 	}
 	
-	public Vector add(Vector vector) {
-		if(vector.getDimension() != this.dimension) throw new IllegalArgumentException();
+	protected Vector add(Vector vector) {
 		int[] otherCoordinates = vector.getCoordinates();
 		int[] newCoordinates = new int[this.dimension];
 		for(int i = 0; i < this.dimension; i++)
@@ -60,8 +60,7 @@ public abstract class Vector implements IVector{
 		return getVector(newCoordinates);
 	}
 
-	public Vector sub(Vector vector) {
-		if(vector.getDimension() != this.dimension) throw new IllegalArgumentException();
+	protected Vector sub(Vector vector) {
 		int[] otherCoordinates = vector.getCoordinates();
 		int[] newCoordinates = new int[this.dimension];
 		for(int i = 0; i < this.dimension; i++)
@@ -69,8 +68,7 @@ public abstract class Vector implements IVector{
 		return getVector(newCoordinates);
 	}
 	
-	public int scalarMult(Vector vector) {
-		if(vector.getDimension() != this.dimension) throw new IllegalArgumentException();
+	protected int scalarMult(Vector vector) {
 		int[] otherCoordinates = vector.getCoordinates();
 		int result = 0;
 		for(int i = 0; i < this.dimension; i++)

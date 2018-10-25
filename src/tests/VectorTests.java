@@ -1,3 +1,5 @@
+package tests;
+import vectors.*;
 import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
@@ -55,20 +57,6 @@ class VectorTests {
 		VectorND one = new VectorND(1, 2, 3, 4, 5);
 		VectorND another = new VectorND(1, 2, 3, 4, 5);
 		assertEquals(one, another);
-	}
-	
-	@Test
-	void NDNotEquals5D() {
-		VectorND one = new VectorND(1, 2, 3, 4, 5);
-		Vector5D another = new Vector5D(1, 2, 3, 4, 5);
-		assertNotEquals(one, another);
-	}
-	
-	@Test
-	void NDNotEquals3D() {
-		VectorND one = new VectorND(1, 2, 3);
-		Vector3D another = new Vector3D(1, 2, 3);
-		assertNotEquals(one, another);
 	}
 	
 	@Test

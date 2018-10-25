@@ -1,9 +1,9 @@
+package vectors;
 
 public class Vector3D extends Vector{
 	public Vector3D(int x, int y, int z) {
 		super(x, y, z);
 }	
-	
 	public Vector3D add(Vector3D vector) {
 		return (Vector3D) super.add(vector);
 	}
@@ -18,7 +18,7 @@ public class Vector3D extends Vector{
 	
 	@Override
 	public boolean equals(Object other) {
-		if (!(other instanceof Vector3D))return false;
+		if (!(other instanceof Vector3D)) throw new IllegalArgumentException();
 		return super.equals(other);
 	}
 	
